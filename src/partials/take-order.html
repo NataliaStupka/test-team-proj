@@ -1,89 +1,111 @@
 <section class="take-order__hero">
   <div class="conteiner">
-    <h1 class="take-order__title">ЗРОБИТИ ЗАМОВЛЕННЯ</h1>
-    <p class="take-order__text">
+    <h1 class="take-order__hero-title">ЗРОБИТИ ЗАМОВЛЕННЯ</h1>
+    <p class="take-order__hero-text">
       На цій сторінці ви можете зробити замовлення заповнивши форму і ми зв'яжемося з вами.
     </p>
-    <p class="take-order__text">
+    <p class="take-order__hero-text">
       Наші фахівці допоможуть підібрати оптимальні для вас параметри і дадуть відповідь на всі ваші
       запитання.
     </p>
   </div>
 </section>
 
-<section class="take-order__modal-form">
-  <form name="contact-form" action="#" class="take-order__form">
-    <h2>ЗВ’ЯЖІТЬСЯ З НАМИ</h2>
+<!-- take-order__contacrs -->
 
-    <label class="take-order__form-field">
-      Ім’я
-      <input
-        type="text"
-        name="user-name"
-        required
-        minlength="2"
-        pattern="[a-zA-Zа-яёА-ЯЁ]+"
-        title="Имя должно содержать символы кирилицы или латиницы"
-        class="take-order__form-input"
-      />
-    </label>
+<section class="take-order__contacts">
+  <div class="take-order__conteiner conteiner">
+    <h2 class="take-order__contacts-title">ЗВ’ЯЖІТЬСЯ З НАМИ</h2>
+    <form class="take-order__form" name="contact-form" action="#">
+      <label class="take-order__form-field">
+        <input
+          class="take-order__form-input"
+          type="text"
+          name="user-name"
+          placeholder="Ім’я"
+          required
+          minlength="2"
+          pattern="[a-zA-Zа-яёА-ЯЁ]+"
+          title="Имя должно содержать символы кирилицы или латиницы"
+        />
+      </label>
 
-    <label class="take-order__form-field">
-      email
-      <input type="email" name="user-mail" required class="take-order__form-input" />
-    </label>
+      <label class="take-order__form-field">
+        <input
+          class="take-order__form-input"
+          type="email"
+          name="user-mail"
+          placeholder="email"
+          required
+        />
+      </label>
 
-    <label class="take-order__form-field">
-      Види пластика
-      <input type="text" name="plastic-types" required class="take-order__form-input" />
-    </label>
+      <label class="take-order__form-field" for="plastic-types" placeholder="Види пластика"></label>
+      <select id="plastic-types" name="plastic-types">
+        <option value="PLA">PLA</option>
+        <option value="ABS">ABS</option>
+        <option value="PVA">PVA</option>
+        <option value="Nylone">Nylone</option>
+        <option value="HIPS">HIPS</option>
+      </select>
 
-    <label class="take-order__form-field">
-      Якість друку
-      <input type="text" name="quality" required class="take-order__form-input" />
-    </label>
+      <label class="take-order__form-field" for="quality" placeholder="Якість друку"></label>
+      <select id="quality" name="quality">
+        <option value="300">300 мікрон</option>
+        <option value="200">200 мікрон</option>
+        <option value="100">100 мікрон</option>
+        <option value="help">Труднощі у виборі - ми допоможемо</option>
+      </select>
 
-    <label class="take-order__form-field">
-      Колір
-      <input type="text" name="color" required class="take-order__form-input" />
-    </label>
+      <label class="take-order__form-field" for="color" placeholder="Якість друку">Колір</label>
+      <select id="color" name="color">
+        <option value="White">White</option>
+        <option value="Black">Black</option>
+        <option value="Blue">Blue</option>
+        <option value="Yelow">Yelow</option>
+        <option value="Green">Green</option>
+        <option value="Orange">Orange</option>
+        <option value="Red">Red</option>
+      </select>
 
-    <label for="plastic-types" class="take-order__form-field">Види пластика</label>
-    <select id="plastic-types" name="plastic-types">
-      <option value="PLA">PLA</option>
-      <option value="ABS">ABS</option>
-      <option value="PVA">PVA</option>
-      <option value="Nylone">Nylone</option>
-      <option value="HIPS">Nylone</option>
-    </select>
+      <label>
+        Повідомлення
+        <textarea name="message" placeholder="Залишіть своє повідомлення"></textarea>
+        <input name="edd-file" type="file" />
+        <p>*Прикріпіть зображення / креслення / STL / Obj / CAD-модель</p>
+      </label>
+      <button class="main-button" type="submit">Відправити</button>
+    </form>
 
-    <label for="quality" class="take-order__form-field">Якість друку</label>
-    <select id="quality" name="quality">
-      <option value="300">300 мікрон</option>
-      <option value="200">200 мікрон</option>
-      <option value="100">100 мікрон</option>
-      <option value="help">Труднощі у виборі - ми допоможемо</option>
-    </select>
+    <div class="take-order__contact-data">
+      <p class="take-order__contact-data-text">ТЕЛЕФОНИ</p>
+      <ul class="take-order__contact-data-list list">
+        <li class="take-order__contact-data-item">
+          <a class="take-order__contact-data-link link" href="tel:+380957384551"
+            >+38 (095) -73-84-551</a
+          >
+        </li>
+        <li class="take-order__contact-data-item">
+          <a class="take-order__contact-data-link link" href="tel:+380980025235"
+            >+38 (098) -00-25-235</a
+          >
+        </li>
+      </ul>
 
-    <label for="color" class="take-order__form-field">Колір</label>
-    <select id="color" name="color">
-      <option value="White">White</option>
-      <option value="Black">Black</option>
-      <option value="Blue">Blue</option>
-      <option value="Yelow">Yelow</option>
-      <option value="Green">Green</option>
-      <option value="Orange">Orange</option>
-      <option value="Red">Red</option>
-    </select>
+      <p class="take-order__contact-data-text">Email</p>
+      <ul class="take-order__contact-data-list list">
+        <li class="take-order__contact-data-item">
+          <a class="take-order__contact-data-link link" href="mailto:3dfreedom.info@gmail.com"
+            >3dfreedom.info@gmail.com</a
+          >
+        </li>
+      </ul>
 
-
-    <label>
-
-    <label>
-      Повідомлення
-      <textarea name="message" placeholder="Залишіть своє повідомлення"></textarea>
-      <p>*Прикріпіть зображення / креслення / STL / Obj / CAD-модель</p>
-    </label>
-    <button type="submit" class="">Відправити</button>
-  </form>
+      <p class="take-order__contact-data-text">Робочий час</p>
+      <ul class="take-order__contact-data-list list">
+        <li class="take-order__contact-data-item">Пн-Пт: З 8:00 До 19:00</li>
+        <li class="take-order__contact-data-item">Сб, Нд: З 10:00 До 17:00</li>
+      </ul>
+    </div>
+  </div>
 </section>
