@@ -40,8 +40,9 @@
         />
       </label>
 
-      <label class="take-order__form-field" for="plastic-types" placeholder="Види пластика"></label>
+      <label class="take-order__form-field" for="plastic-types"></label>
       <select class="take-order__form-list" id="plastic-types" name="plastic-types">
+        <option selected="selected">Виды пластика</option>
         <option value="PLA">PLA</option>
         <option value="ABS">ABS</option>
         <option value="PVA">PVA</option>
@@ -49,16 +50,18 @@
         <option value="HIPS">HIPS</option>
       </select>
 
-      <label class="take-order__form-field" for="quality" placeholder="Якість друку"></label>
+      <label class="take-order__form-field" for="quality"></label>
       <select class="take-order__form-list" id="quality" name="quality">
+        <option selected="selected">Якість друку</option>
         <option value="300">300 мікрон</option>
         <option value="200">200 мікрон</option>
         <option value="100">100 мікрон</option>
         <option value="help">Труднощі у виборі - ми допоможемо</option>
       </select>
 
-      <label class="take-order__form-field" for="color" placeholder="Якість друку"></label>
+      <label class="take-order__form-field" for="color"></label>
       <select class="take-order__form-list" id="color" name="color">
+        <option selected="selected">Колір</option>
         <option value="White">White</option>
         <option value="Black">Black</option>
         <option value="Blue">Blue</option>
@@ -75,8 +78,10 @@
           name="message"
           placeholder="Залишіть своє повідомлення"
         ></textarea>
-        <input name="edd-file" type="file" />
-        <p>*Прикріпіть зображення / креслення / STL / Obj / CAD-модель</p>
+        <input class="take-order__message-input" name="edd-file" type="file" />
+        <p class="take-order__message-text">
+          *Прикріпіть зображення / креслення / STL / Obj / CAD-модель
+        </p>
       </label>
       <button class="main-button take-order__btn" type="submit">Відправити</button>
     </form>
